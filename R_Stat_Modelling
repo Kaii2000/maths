@@ -67,7 +67,11 @@ head() #将导入的数据显示出来
 attach() #添加路径存储的索引，相当于绑定一个数据框 
 detach()解除数据路径存储的绑定
 
-# 5.Editor and graphical interface:
+#If-Else Statement
 
-
+if (TRUE) {
+   print("Go to sleep!")
+} else {
+   print("Wake up!")
+}
 
