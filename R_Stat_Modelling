@@ -17,6 +17,8 @@ a+b
 x<-c(5,2,6,1,4,1)
 y<-c('a','b','c','d','e','f')
 z<-1:6
+typeof(vector_name) #check the type of elements in a vector
+length(vector_name) #check the length of a vector
 
 # Vector combinatuon
 v<-c(x,y,z) #x,y,z三个向量合并
