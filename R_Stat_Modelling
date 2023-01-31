@@ -1,3 +1,8 @@
+#introduce Package
+
+install.packages('package-name')
+library(package-name)  #package can be found at https://cran.r-project.org
+
 # 1. use the R Console as a calculator. 
 2+3
 2*3
