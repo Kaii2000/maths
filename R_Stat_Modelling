@@ -49,3 +49,23 @@ pie(table(y))
 help(hist) # 查找某个function的详情可以用help指令
 
 # 4.Data import and export:
+getwd() #找到现在work directory的路径
+setwd("/Users/zhangkaibang/Desktop/RData") #将路径设置为/Users/zhangkaibang/Desktop/RData
+                                           #以后有要倒入的文件可以放到RData里
+#for .txt using:  
+read.table(), 
+#for .csv, 
+using read.csv() 
+
+header=TRUE #table里面第一行用于列名称，不进行运算 和read. 搭配使用
+header=FALSE #table第一行就进行运算 
+
+#Show Export
+head() #将导入的数据显示出来
+attach() #添加路径存储的索引，相当于绑定一个数据框 
+detach()解除数据路径存储的绑定
+
+# 5.Editor and graphical interface:
+
+
+
