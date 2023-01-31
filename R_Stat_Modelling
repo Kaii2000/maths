@@ -46,6 +46,8 @@ data$x # x所有元素
 
 #3.Functions in R
 
+functionName(value)
+
 mean(x)
 sum(x)
 max(x)
