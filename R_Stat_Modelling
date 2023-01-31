@@ -9,6 +9,9 @@ exp(2) # natural exponential
 <= # Less than or equal to:
 == # Is equal to:
 != # Is NOT equal to:
+the AND operator (&)
+the OR operator (|)
+the NOT operator, otherwise known as the bang operator (!)
 
 # Define and use variables:
 a<-1
