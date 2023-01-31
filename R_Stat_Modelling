@@ -6,6 +6,9 @@
 sqrt(2) # square root
 exp(2) # natural exponential
 2^3     # power
+<= # Less than or equal to:
+== # Is equal to:
+!= # Is NOT equal to:
 
 # Define and use variables:
 a<-1
