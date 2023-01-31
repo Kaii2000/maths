@@ -1,0 +1,51 @@
+# 1. use the R Console as a calculator. 
+2+3
+2*3
+3*4
+8/2
+sqrt(2) # square root
+exp(2) # natural exponential
+2^3     # power
+
+# Define and use variables:
+a<-1
+b<-2
+a+b
+
+#2.Vector, matrices and data frame
+# Vectors:
+x<-c(5,2,6,1,4,1)
+y<-c('a','b','c','d','e','f')
+z<-1:6
+
+# Vector combinatuon
+v<-c(x,y,z) #x,y,z三个向量合并
+
+# Matrices
+A<-matrix(y,2,6) #以向量y为基础，构建两行6列的矩阵
+
+A[1,2] #矩阵A第一行第二列的元素
+
+A[1,2]<-1000 #将a12的数值改为1000
+
+# Data frame
+data<-data.frame(x,y,z)      #can include vectors of different type, but need to be same length
+
+data[1,2] # element
+data[1,] # row (observation)
+data[,2] # column (variable)
+data$x # x所有元素
+
+#3.Functions in R
+
+mean(x)
+sum(x)
+max(x)
+sd(x)
+table(y) # frequency table
+hist(x)
+pie(table(y))
+
+help(hist) # 查找某个function的详情可以用help指令
+
+# 4.Data import and export:
