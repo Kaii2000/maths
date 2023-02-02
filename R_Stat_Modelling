@@ -43,7 +43,7 @@ A[1,2]<-1000 #将a12的数值改为1000
 
 # Data frame
 data<-data.frame(x,y,z)      #can include vectors of different type, but need to be same length
-
+#You can think of a data frame as a spreadsheet or as a SQL table.
 data[1,2] # element
 data[1,] # row (observation)
 data[,2] # column (variable)
