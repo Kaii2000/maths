@@ -76,9 +76,11 @@ header=TRUE #table里面第一行用于列名称，不进行运算 和read. 搭�
 header=FALSE #table第一行就进行运算 
 
 #Show Export
-head() #将导入的数据显示出来
+head() #将导入的数据显示出来  returns the first 6 rows of a data frame
+head(name,n) #first n rows of data frame
 attach() #添加路径存储的索引，相当于绑定一个数据框 
 detach()解除数据路径存储的绑定
+summary() # returns the first 6 rows of a data frame
 
 #If-Else Statement
 
@@ -87,4 +89,45 @@ if (TRUE) {
 } else {
    print("Wake up!")
 }
+
+
+
+dplyr & readr packages
+
+1) pipe operator
+df %>%
+head()      # equals to head(df)
+
+2) 选中data frame 中的某些列 
+select(data frame name, column name1, column name2...) #eg select(customers,age,gender)
+or
+data frame name %>%                        ##eg customers %>%
+select( column name1, column name2...)      ##  select(age,gender)
+
+3）Excluding Columns
+df_name %>%
+  select(-name1,-name2...)
+
+4)Choosing Rows
+data frame %>%
+  filter(name1=='xxx',z>SSS)
+#eg:
+orders %>%
+  filter(shoe_material == 'faux-leather',price > 25)
+orders %>%
+  filter(shoe_type == 'clogs' | price < 20) # 显示鞋子种类为clogs或价格低于20的所有rows
+orders %>%
+  filter(!(shoe_color == red)) #显示除了鞋子颜色是红色的所有rows
+
+4)Arranging Rows
+arrange() #arrange默认数字由小到大，字母从A到Z排列，某则要加desc表示descending order
+
+#eg
+customers %>%
+  arrange(desc(age))
+customers %>%
+  arrange(name)
+ 
+
+
 
