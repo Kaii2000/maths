@@ -128,6 +128,24 @@ customers %>%
 customers %>%
   arrange(name)
  
+5)Adding a Column
+mutate()
+#eg
+df %>%
+  mutate(sales_tax = price * 0.075)
 
+6)Adding Multiple Columns
+mutate(a,b,c....)
+#eg.
+df %>%
+  mutate(profit = price - cost_to_manufacture,
+         in_stock = TRUE)
 
+7)Transmute Columns # only keeping the new columns you add
+transmute(a=,b=,...)
+
+8)Rename Columns
+rename(new_column_name = old_column_name)
+
+#check renamed column: names() or colnames() #confirm the names of the columns
 
