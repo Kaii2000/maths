@@ -149,3 +149,20 @@ rename(new_column_name = old_column_name)
 
 #check renamed column: names() or colnames() #confirm the names of the columns
 
+
+#
+###Data Cleaning
+
+1)  organize data better in dplyr and readr
+files <- list.files(pattern = "file_.*csv")  #The first line uses list.files() and a regular expression to find any file in the current directory 
+                                              that starts with 'file_' and has an extension of csv, storing the name of each file in a vector files
+df_list <- lapply(files,read_csv)            #read each file in files into a data frame with read_csv(), storing the data frames in df_list
+df <- bind_rows(df_list)                      #concatenates all of those data frames together with dplyr’s bind_rows() function
+
+2)Counting rows: nrow(df_name)
+
+3)Reshaping your Data
+df %>%
+  gather('Checking','Savings',key='Account Type',value='Amount')
+  
+4)count(df,column name):takes a data frame and a column as arguments,returns a table with counts of the unique values in the named column
