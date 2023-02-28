@@ -233,3 +233,47 @@ SST<-sum((Stkloss-mean(Stkloss))^2)                # this computes explicitly th
 # And finally, the predictive R^2:
 Rp<-1-PRESS/SST
 Rp
+
+
+#aic
+#The smaller the AIC value, the better the model fit.
+The Akaike information criterion (AIC) is a mathematical method for evaluating 
+how well a model fits the data it was generated from. 
+In statistics, AIC is used to compare different possible models and determine
+which one is the best fit for the data.
+https://www.scribbr.com/statistics/akaike-information-criterion/#:~:
+text=The%20Akaike%20information%20criterion%20(AIC,best%20fit%20for%20the%20data.
+
+#Prected R squred implementation:
+pred.R2<-function(model){
+  X<-model.matrix(model) # to obtain the design matrix X of the model.
+  H<-X%*%solve(t(X)%*%X)%*%t(X)  # this computes the projection matrix H
+  h<-diag(H)                    # this extracts the diagonal of the matrix (elements h_ii)
+  PRESS<-sum((model$residuals/(1-h))^2) # this computes the Predictive residuals 
+  SST<-sum((model$model[,1]-mean(model$model[,1]))^2)                # this computes explicitly the total sum of squares  
+  
+  # And finally, the predictive R^2:
+  Rp<-1-PRESS/SST
+  Rp
+}
+
+pred.R2(ModelFull)
+pred.R2(ModelRed)
+pred.R2(Model2)
+
+#Step-wise search:
+we can use it to find the best fit model in R:
+
+Model.best<-step(ModelFull)
+summary(Model.best)
+plot(Model.best) 
+
+
+
+
+
+
+
+
+
+
