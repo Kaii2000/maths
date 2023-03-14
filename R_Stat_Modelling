@@ -476,9 +476,6 @@ g_mu = coefs[1] + Ages*coefs[2]
 probs = exp(g_mu)/(1 + exp(g_mu)) # inverse of the link function
 points(Ages, probs, type="l")
 
-# What would you conclude from this graph?
-
-
 
 
 
